@@ -1,0 +1,42 @@
+.navParent {
+    display: flex;
+    width: 100px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    position: relative;
+    padding: 2px 1px 7px 11px ;
+    cursor: pointer;
+}
+
+.navChild {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left:-270px;
+    width: 270px;
+    height: 50px;
+    background-color: black;
+    z-index: 2;
+    transition: left 0.5s ease 0s;
+    overflow: hidden;
+}
+
+.navParent:hover .navChild{
+    left: 0;
+}
+
+.navLink {
+    align-self: center;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(15, 122, 252, 0.2);
+}
+
+.navLink:hover {
+    text-decoration: none;
+    color: #cf0000;
+    border-bottom-color: rgba(208, 64, 0, 0.2);
+}

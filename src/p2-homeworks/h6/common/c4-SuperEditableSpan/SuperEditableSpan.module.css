@@ -1,0 +1,10 @@
+
+
+.spanClass {
+    margin: 20px;
+}
+
+.spanClass::before {
+    width: 20px;
+    height: 20px;
+}

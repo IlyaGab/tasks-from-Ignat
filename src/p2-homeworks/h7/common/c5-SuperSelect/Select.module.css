@@ -1,0 +1,9 @@
+.select {
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}

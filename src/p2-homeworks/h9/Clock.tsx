@@ -27,7 +27,7 @@ function Clock() {
     }
 
     const stringTime = date.format('HH:mm:ss')
-    const stringDate = date.format('DD:MM:YYYY')
+    const stringDate = date.format('DD.MM.YYYY')
 
     return (
         <div>

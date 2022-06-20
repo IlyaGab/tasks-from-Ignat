@@ -12,8 +12,8 @@ function HW12() {
     const themes = ['dark', 'red', 'some'];
     const dispatch = useDispatch()
 
-    const onChangeCallback = (e:ChangeEvent<HTMLSelectElement>) => {
-        dispatch(changeThemeC(e.currentTarget.value))
+    const onChangeCallback = (theme:string) => {
+        dispatch(changeThemeC(theme))
     }
 
     return (
@@ -23,7 +23,7 @@ function HW12() {
                 homeworks 12
             </span>
 
-            <SuperSelect options={themes} value={theme} onChange={onChangeCallback}/>
+            <SuperSelect options={themes} value={theme} onChangeOption={onChangeCallback}/>
             <hr/>
         </div>
     );

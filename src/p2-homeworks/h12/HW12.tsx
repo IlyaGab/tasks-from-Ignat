@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import s from "./HW12.module.css";
 import {useDispatch, useSelector} from 'react-redux';
 import SuperSelect from '../h7/common/c5-SuperSelect/SuperSelect';
@@ -10,11 +10,9 @@ function HW12() {
     const theme = useSelector<AppStoreType,string>((state)=> state.theme.theme)
 
     const themes = ['dark', 'red', 'some'];
-    const [value, setValue] = useState(themes[2])
     const dispatch = useDispatch()
 
     const onChangeCallback = (e:ChangeEvent<HTMLSelectElement>) => {
-        setValue(e.currentTarget.value)
         dispatch(changeThemeC(e.currentTarget.value))
     }
 
@@ -25,9 +23,7 @@ function HW12() {
                 homeworks 12
             </span>
 
-            {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
-            <SuperSelect options={themes} value={value} onChange={onChangeCallback}/>
+            <SuperSelect options={themes} value={theme} onChange={onChangeCallback}/>
             <hr/>
         </div>
     );
